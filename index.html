@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alter Mkt — Marketing digital & IA para PYMES</title>
-<meta name="description" content="Le damos otra cara digital a tu negocio de siempre. Consultoría, branding, redes sociales, campañas y automatizaciones con IA para PYMES.">
+<title>Alter Mkt — Agencia de Marketing con IA para PYMES</title>
+<meta name="description" content="Agencia de marketing con IA para PYMES: estrategia, contenido y automatización para que tu negocio se suba a la ola de la inteligencia artificial sin quedar afuera.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap" rel="stylesheet">
@@ -146,27 +146,23 @@
     font-size:clamp(2.4rem,6vw,4.6rem);
     color:var(--negro);
     max-width:900px;
+    text-wrap:balance;
   }
   .hero h1 span{color:var(--violeta);}
   .hero-sub{
     font-size:clamp(1rem,2vw,1.3rem);
     font-weight:500;
-    max-width:560px;
+    max-width:580px;
     margin:26px 0 40px;
   }
   .hero-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;}
-  .hero-note{font-weight:600;font-size:0.9rem;}
-  .hero-icons{
-    display:flex;gap:18px;margin-top:64px;flex-wrap:wrap;
-  }
-  .hero-icons .chip{
+  .hero-note{
     display:flex;align-items:center;gap:10px;
-    background:rgba(255,255,255,0.55);
-    border:1px solid rgba(22,22,26,0.1);
-    padding:10px 16px;border-radius:100px;
-    font-weight:700;font-size:0.82rem;
+    margin-top:52px;
+    font-weight:600;font-size:0.92rem;
+    max-width:520px;
   }
-  .hero-icons svg{width:20px;height:20px;}
+  .hero-note svg{width:22px;height:22px;flex-shrink:0;color:var(--violeta);}
 
   /* ---------- ANIMATED ICON BASE ---------- */
   .icon-wrap{
@@ -189,35 +185,17 @@
     0%,100%{opacity:1;transform:scale(1);}
     50%{opacity:0.6;transform:scale(1.15);}
   }
-  @keyframes dash-move{
-    to{stroke-dashoffset:0;}
-  }
 
   /* ---------- NOSOTROS ---------- */
   .nosotros{background:var(--blanco);}
-  .nosotros-grid{
-    display:grid;grid-template-columns:1fr;gap:56px;align-items:start;
-  }
-  .nosotros h2{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--violeta);margin-bottom:26px;}
-  .nosotros p{font-size:1.05rem;margin-bottom:18px;color:#3a3a40;}
-  .nosotros strong{color:var(--negro);}
-  .ceo-card{
-    margin-top:28px;display:inline-flex;align-items:center;gap:16px;
-    padding:18px 24px;border:2px solid var(--negro);border-radius:16px;
-  }
-  .ceo-badge{
-    width:56px;height:56px;border-radius:50%;
-    background:var(--violeta);color:var(--blanco);
-    display:flex;align-items:center;justify-content:center;
-    font-weight:900;font-size:1.1rem;flex-shrink:0;
-  }
-  .ceo-card .name{font-weight:800;font-size:1rem;}
-  .ceo-card .role{font-weight:500;font-size:0.85rem;color:#555;}
+  .nosotros .sec-head{max-width:640px;margin:0 auto 48px;text-align:center;}
+  .nosotros .sec-head p{margin-top:16px;font-size:1.05rem;color:#3a3a40;}
 
   /* ALTER letters */
   .alter-letters{
     display:grid;grid-template-columns:repeat(5,1fr);gap:16px;
     background:var(--negro);border-radius:24px;padding:44px 28px;
+    max-width:920px;margin:0 auto;
   }
   @media(max-width:640px){.alter-letters{grid-template-columns:repeat(3,1fr);}}
   .alter-letter{
@@ -243,10 +221,46 @@
   .servicios{background:var(--violeta);color:var(--blanco);}
   .servicios h2{color:var(--lima);font-size:clamp(1.9rem,4vw,2.8rem);}
   .servicios .eyebrow{color:var(--lima);}
-  .sec-head{max-width:640px;margin-bottom:56px;}
+  .sec-head{max-width:680px;margin-bottom:56px;}
   .sec-head p{margin-top:16px;font-size:1.05rem;color:#e3d9ff;}
+
+  /* flywheel diagram */
+  .flywheel{
+    max-width:480px;margin:0 auto 20px;
+    display:flex;flex-direction:column;align-items:center;
+  }
+  .flywheel svg{width:100%;height:auto;overflow:visible;}
+  .fw-ring{
+    stroke-dasharray:6 14;
+    animation:dash-flow 3.2s linear infinite;
+  }
+  @keyframes dash-flow{ to{ stroke-dashoffset:-400; } }
+  .fw-arrow{fill:var(--lima);}
+  .fw-node circle{fill:var(--blanco);}
+  .fw-node .fw-num{
+    fill:var(--naranja);font-weight:900;font-size:12px;
+    font-family:'Inter',sans-serif;text-transform:uppercase;
+  }
+  .fw-node .fw-label{
+    fill:var(--violeta);font-weight:800;font-size:13px;
+    font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:0.01em;
+  }
+  .fw-center circle{fill:var(--lima);}
+  .fw-center text{
+    fill:var(--violeta);font-weight:900;font-size:15px;
+    font-family:'Inter',sans-serif;text-transform:uppercase;
+  }
+  .fw-caption{
+    max-width:520px;text-align:center;margin:28px auto 0;
+    font-size:0.95rem;color:#e3d9ff;
+  }
+  @media(prefers-reduced-motion:reduce){
+    .fw-ring{animation:none;}
+  }
+
   .servicios-grid{
     display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;
+    margin-top:64px;
   }
   .servicio-card{
     background:rgba(255,255,255,0.06);
@@ -254,42 +268,39 @@
     border-radius:var(--radius);
     padding:32px 26px;
     transition:transform .25s ease, background .25s ease;
+    position:relative;
   }
   .servicio-card:hover{transform:translateY(-6px);background:rgba(255,255,255,0.11);}
+  .servicio-card .fw-num-badge{
+    font-weight:900;font-size:0.78rem;color:var(--lima);
+    letter-spacing:0.08em;margin-bottom:14px;display:block;
+  }
   .servicio-card h3{
     font-size:1.05rem;color:var(--blanco);margin-bottom:10px;
   }
   .servicio-card p{font-size:0.92rem;color:#d9cdfb;}
   .servicio-card .icon-wrap{background:rgba(255,255,255,0.12);}
 
-  /* ---------- CLIENTES ---------- */
+  /* ---------- RESEÑAS ---------- */
   .clientes{background:var(--blanco);}
-  .clientes-logos{
-    display:flex;flex-wrap:wrap;gap:16px;margin-bottom:64px;
-  }
-  .cliente-badge{
-    padding:16px 28px;border-radius:100px;
-    border:2px solid var(--negro);
-    font-weight:900;text-transform:uppercase;letter-spacing:0.01em;
-    font-size:0.95rem;
-  }
-  .cliente-badge:nth-child(1){color:var(--violeta);border-color:var(--violeta);}
-  .cliente-badge:nth-child(2){color:var(--naranja);border-color:var(--naranja);}
-  .cliente-badge:nth-child(3){color:var(--negro);}
+  .clientes .sec-head{max-width:680px;}
   .testimonios{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;
   }
   .testimonio{
     background:#F7F7F5;border-radius:var(--radius);padding:30px;
+    display:flex;flex-direction:column;
   }
-  .testimonio p{font-size:1rem;color:#333;margin-bottom:20px;font-style:italic;}
+  .stars{color:var(--naranja);font-size:0.95rem;letter-spacing:2px;margin-bottom:14px;}
+  .testimonio p{font-size:0.98rem;color:#333;margin-bottom:20px;font-style:italic;flex-grow:1;}
   .testi-who{display:flex;align-items:center;gap:12px;}
   .testi-avatar{
     width:42px;height:42px;border-radius:50%;
     display:flex;align-items:center;justify-content:center;
-    font-weight:900;color:var(--blanco);font-size:0.85rem;
+    font-weight:900;color:var(--blanco);font-size:0.85rem;flex-shrink:0;
   }
   .testi-name{font-weight:800;font-size:0.9rem;}
+  .testi-role{font-weight:500;font-size:0.8rem;color:#666;}
 
   /* ---------- CONTACTO ---------- */
   .contacto{background:var(--lima);}
@@ -302,12 +313,26 @@
     background:var(--negro);color:var(--blanco);border-radius:var(--radius);
     padding:30px;display:flex;flex-direction:column;gap:14px;
     transition:transform .25s ease;
+    cursor:pointer;
   }
   .contacto-card:hover{transform:translateY(-6px);}
   .contacto-card .icon-wrap{background:rgba(255,255,255,0.1);margin-bottom:0;}
   .contacto-card h3{font-size:0.95rem;color:var(--blanco);}
   .contacto-card span{font-size:0.85rem;color:#c9c9c9;font-weight:500;text-transform:none;}
+  .contacto-card .hint{display:block;font-size:0.72rem;color:#8a8a8a;margin-top:2px;}
   .contacto-card.accent{background:var(--violeta);}
+
+  /* toast */
+  .toast{
+    position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
+    background:var(--negro);color:var(--blanco);
+    padding:12px 22px;border-radius:100px;
+    font-weight:700;font-size:0.85rem;
+    opacity:0;pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease;
+    z-index:200;white-space:nowrap;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 
   /* ---------- FOOTER ---------- */
   footer{
@@ -333,7 +358,7 @@
       <a href="#inicio">Inicio</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#servicios">Servicios</a>
-      <a href="#clientes">Clientes</a>
+      <a href="#clientes">Reseñas</a>
       <a href="#contacto">Contacto</a>
       <a href="https://wa.me/5491157443449" target="_blank" class="btn btn-accent mobile-only-cta">Escribinos</a>
     </div>
@@ -350,9 +375,9 @@
   <div class="hero-blob b1"></div>
   <div class="hero-blob b2"></div>
   <div class="wrap">
-    <div class="eyebrow" style="color:var(--violeta);">Marketing digital &amp; IA para PYMES</div>
-    <h1>LE DAMOS OTRA CARA DIGITAL A TU <span>NEGOCIO DE SIEMPRE</span></h1>
-    <p class="hero-sub">Las redes sociales son la nueva vidriera. Nosotros la diseñamos, la mantenemos brillante y hacemos que vendan — con estrategia, no con suerte.</p>
+    <div class="eyebrow" style="color:var(--violeta);">Agencia de Marketing con IA para PYMES</div>
+    <h1>TU PYME TAMBIÉN PUEDE SUBIRSE A <span>LA OLA DE LA IA</span></h1>
+    <p class="hero-sub">Sabemos que la inteligencia artificial cambió las reglas del juego — y sabemos que da vértigo. Nosotros la volvemos simple: estrategia, contenido y automatización para que tu negocio no se quede afuera.</p>
     <div class="hero-actions">
       <a href="https://wa.me/5491157443449" target="_blank" class="btn btn-primary">
         Dale, escribinos
@@ -360,10 +385,9 @@
       </a>
       <a href="#servicios" class="btn btn-outline">Ver servicios</a>
     </div>
-    <div class="hero-icons">
-      <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#5E17EB" stroke-width="2" style="animation:wiggle 2.4s ease-in-out infinite;"><path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z"/><line x1="9" y1="21" x2="15" y2="21"/></svg> Consultoría</div>
-      <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2" style="animation:bounce-icon 2.6s ease-in-out infinite;"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="19.5" r="2.5"/></svg> Branding</div>
-      <div class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#16161A" stroke-width="2" style="animation:wiggle 2.2s ease-in-out infinite .3s;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Redes sociales</div>
+    <div class="hero-note reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      Ya ayudamos a pymes de salud, gastronomía, estudios profesionales y retail a meterse en la ola de la IA sin perderse en el camino.
     </div>
   </div>
 </section>
@@ -371,28 +395,17 @@
 <!-- NOSOTROS -->
 <section class="nosotros" id="nosotros">
   <div class="wrap">
-    <div class="nosotros-grid">
-      <div class="reveal" style="max-width:720px;">
-        <div class="eyebrow" style="color:var(--naranja);">Nosotros</div>
-        <h2>ALTER NO ES SOLO UN APELLIDO</h2>
-        <p>Alter Mkt nació de un apellido y se convirtió en una forma de trabajar. <strong>Jazmín Alter</strong> fundó la agencia con una idea simple: las pymes merecen el mismo nivel de estrategia, diseño y tecnología que las marcas grandes — sin la vuelta corporativa.</p>
-        <p>Por eso "Alter" terminó siendo también la manera más corta de explicar qué nos define. Cinco letras, cinco formas de trabajar que se repiten en cada cuenta que tomamos.</p>
-        <p>Cuando hay mucho por hacer, en el equipo le decimos <strong>"lluvia de Alter"</strong>: ideas que caen todas juntas, se ordenan y se convierten en algo que tu negocio puede usar el lunes a la mañana.</p>
-        <div class="ceo-card">
-          <div class="ceo-badge">JA</div>
-          <div>
-            <div class="name">Jazmín Alter</div>
-            <div class="role">Fundadora &amp; CEO de Alter Mkt</div>
-          </div>
-        </div>
-      </div>
-      <div class="alter-letters reveal">
-        <div class="alter-letter"><span class="big">A</span><span class="word">Auténticos</span></div>
-        <div class="alter-letter"><span class="big">L</span><span class="word">Lúcidos</span></div>
-        <div class="alter-letter"><span class="big">T</span><span class="word">Transparentes</span></div>
-        <div class="alter-letter"><span class="big">E</span><span class="word">Estratégicos</span></div>
-        <div class="alter-letter"><span class="big">R</span><span class="word">Resultados</span></div>
-      </div>
+    <div class="sec-head reveal">
+      <div class="eyebrow" style="color:var(--naranja);justify-content:center;">Cómo trabajamos</div>
+      <h2>CINCO LETRAS QUE SE REPITEN EN CADA CUENTA</h2>
+      <p>Así encaramos cada pyme que nos elige, sin excepción:</p>
+    </div>
+    <div class="alter-letters reveal">
+      <div class="alter-letter"><span class="big">A</span><span class="word">IA</span></div>
+      <div class="alter-letter"><span class="big">L</span><span class="word">Listos</span></div>
+      <div class="alter-letter"><span class="big">T</span><span class="word">Transparentes</span></div>
+      <div class="alter-letter"><span class="big">E</span><span class="word">Eficiencia</span></div>
+      <div class="alter-letter"><span class="big">R</span><span class="word">Resultados</span></div>
     </div>
   </div>
 </section>
@@ -402,71 +415,151 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow">Servicios</div>
-      <h2>TODO LO QUE TU MARCA NECESITA, EN UN SOLO EQUIPO</h2>
-      <p>Sin vueltas ni contratos eternos: elegís lo que tu negocio necesita hoy y crecemos el resto a medida que lo pedís.</p>
+      <h2>SUMÁ TU PYME A LA OLA DE LA IA, SIN QUEDARTE AFUERA</h2>
+      <p>La inteligencia artificial ya está cambiando cómo se vende. Nosotros la traducimos en estrategia, contenido y automatización que trabajan juntos — para que tu negocio no tenga que ponerse al día solo.</p>
     </div>
+
+    <div class="flywheel reveal">
+      <svg viewBox="0 0 400 400" role="img" aria-label="Ciclo de servicios: Consultoría, Branding, Redes y Contenido, Campañas y Automatización con IA, retroalimentándose entre sí">
+        <circle class="fw-ring" cx="200" cy="200" r="150" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="2"/>
+
+        <polygon class="fw-arrow" points="-6,-5 8,0 -6,5" transform="translate(288.2,78.6) rotate(36)"/>
+        <polygon class="fw-arrow" points="-6,-5 8,0 -6,5" transform="translate(342.7,246.4) rotate(108)"/>
+        <polygon class="fw-arrow" points="-6,-5 8,0 -6,5" transform="translate(200,350) rotate(180)"/>
+        <polygon class="fw-arrow" points="-6,-5 8,0 -6,5" transform="translate(57.3,246.4) rotate(252)"/>
+        <polygon class="fw-arrow" points="-6,-5 8,0 -6,5" transform="translate(111.8,78.6) rotate(324)"/>
+
+        <g class="fw-center">
+          <circle cx="200" cy="200" r="54"/>
+          <text x="200" y="196" text-anchor="middle">Estrategia</text>
+          <text x="200" y="214" text-anchor="middle">+ IA</text>
+        </g>
+
+        <g class="fw-node" transform="translate(200,50)">
+          <circle r="42"/>
+          <text class="fw-num" x="0" y="-6" text-anchor="middle">01</text>
+          <text class="fw-label" x="0" y="12" text-anchor="middle">Consultoría</text>
+        </g>
+        <g class="fw-node" transform="translate(343,154)">
+          <circle r="42"/>
+          <text class="fw-num" x="0" y="-6" text-anchor="middle">02</text>
+          <text class="fw-label" x="0" y="12" text-anchor="middle">Branding</text>
+        </g>
+        <g class="fw-node" transform="translate(288,321)">
+          <circle r="42"/>
+          <text class="fw-num" x="0" y="-6" text-anchor="middle">03</text>
+          <text class="fw-label" x="0" y="12" text-anchor="middle">Redes</text>
+        </g>
+        <g class="fw-node" transform="translate(112,321)">
+          <circle r="42"/>
+          <text class="fw-num" x="0" y="-6" text-anchor="middle">04</text>
+          <text class="fw-label" x="0" y="12" text-anchor="middle">Campañas</text>
+        </g>
+        <g class="fw-node" transform="translate(57,154)">
+          <circle r="42"/>
+          <text class="fw-num" x="0" y="-6" text-anchor="middle">05</text>
+          <text class="fw-label" x="0" y="12" text-anchor="middle">Automatización</text>
+        </g>
+      </svg>
+      <p class="fw-caption">No es una lista de servicios sueltos: es un ciclo. Cada resultado que mide la IA vuelve a nutrir la estrategia — y así seguimos, mejorando en cada vuelta.</p>
+    </div>
+
     <div class="servicios-grid">
       <div class="servicio-card reveal">
+        <span class="fw-num-badge">01 · Consultoría</span>
         <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#E3FF3B" stroke-width="2" stroke-linecap="round" style="animation:glow-pulse 2.4s ease-in-out infinite;"><path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z"/><line x1="9" y1="21" x2="15" y2="21"/></svg></div>
         <h3>Consultoría</h3>
-        <p>Diagnóstico honesto y un plan de acción a medida para que sepas exactamente en qué invertir primero.</p>
+        <p>Diagnóstico honesto de dónde estás hoy y un plan concreto para meter la IA donde realmente te sirve.</p>
       </div>
       <div class="servicio-card reveal">
+        <span class="fw-num-badge">02 · Branding</span>
         <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"><circle cx="13.5" cy="6.5" r="2.5" style="animation:bounce-icon 2.2s ease-in-out infinite;"/><circle cx="19" cy="13" r="2.5" style="animation:bounce-icon 2.2s ease-in-out infinite .2s;"/><circle cx="6" cy="12" r="2.5" style="animation:bounce-icon 2.2s ease-in-out infinite .4s;"/><circle cx="10" cy="19.5" r="2.5" style="animation:bounce-icon 2.2s ease-in-out infinite .6s;"/></svg></div>
         <h3>Branding</h3>
-        <p>Identidad visual y de marca con impacto duradero: que se te reconozca antes de leer el nombre.</p>
+        <p>Identidad visual con impacto duradero: que te reconozcan antes de leer el nombre.</p>
       </div>
       <div class="servicio-card reveal">
+        <span class="fw-num-badge">03 · Redes &amp; Contenido</span>
         <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#E3FF3B" stroke-width="2" stroke-linecap="round" style="animation:wiggle 2.4s ease-in-out infinite;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
-        <h3>Redes sociales</h3>
-        <p>Contenido estratégico, no solo posteos: cada pieza responde a un objetivo de tu negocio.</p>
+        <h3>Redes &amp; Contenido</h3>
+        <p>Contenido estratégico + IA para producir más, mejor y sin perder tu voz.</p>
       </div>
       <div class="servicio-card reveal">
+        <span class="fw-num-badge">04 · Campañas</span>
         <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M16 8a5 5 0 0 1 0 8" style="animation:glow-pulse 1.8s ease-in-out infinite;"/><path d="M18.5 5.5a9 9 0 0 1 0 13" style="animation:glow-pulse 1.8s ease-in-out infinite .3s;"/></svg></div>
         <h3>Campañas</h3>
-        <p>Publicidad y comunicación enfocada en resultados: pauta que se mide, no que se cruza los dedos.</p>
+        <p>Publicidad que se mide y se ajusta con datos, no con suerte.</p>
       </div>
       <div class="servicio-card reveal">
+        <span class="fw-num-badge">05 · Automatización con IA</span>
         <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#E3FF3B" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3" style="transform-origin:center;animation:spin-slow 4s linear infinite;"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z" style="transform-origin:center;animation:spin-slow 10s linear infinite;"/></svg></div>
-        <h3>Automatizaciones</h3>
-        <p>Producción de contenido e IA aplicada para responder más rápido sin perder la voz de tu marca.</p>
+        <h3>Automatización con IA</h3>
+        <p>Respuestas, recordatorios y seguimiento automático — el motor que retroalimenta toda la estrategia.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CLIENTES -->
+<!-- RESEÑAS -->
 <section class="clientes" id="clientes">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="eyebrow" style="color:var(--violeta);">Clientes</div>
-      <h2 style="color:var(--negro);">MARCAS QUE YA TIENEN OTRA CARA</h2>
-    </div>
-    <div class="clientes-logos reveal">
-      <div class="cliente-badge">Camytex Studio</div>
-      <div class="cliente-badge">Alter Haus</div>
-      <div class="cliente-badge">Fluvial</div>
+      <div class="eyebrow" style="color:var(--violeta);">Nos eligen</div>
+      <h2 style="color:var(--negro);">PYMES Y PROFESIONALES QUE YA SE SUBIERON A LA OLA</h2>
     </div>
     <div class="testimonios">
       <div class="testimonio reveal">
-        <p>"Nos ayudaron a ordenar la comunicación y mostrar quiénes somos realmente."</p>
+        <div class="stars">★★★★★</div>
+        <p>"Con Alter Mkt nuestras redes dejaron de ser un saludo a la bandera. Ordenaron la estrategia y sumaron IA para responder consultas más rápido — hoy vendemos por Instagram como nunca."</p>
         <div class="testi-who">
-          <div class="testi-avatar" style="background:var(--violeta);">CX</div>
-          <div class="testi-name">Camytex Studio</div>
+          <div class="testi-avatar" style="background:var(--violeta);">GU</div>
+          <div>
+            <div class="testi-name">Gustavo</div>
+            <div class="testi-role">CEO, Camytex Studio</div>
+          </div>
         </div>
       </div>
       <div class="testimonio reveal">
-        <p>"Estrategia clara y sin vueltas. Entienden a las pymes de verdad."</p>
+        <div class="stars">★★★★★</div>
+        <p>"Nos daba respeto meternos con automatización, pensábamos que iba a sonar frío. Fue al revés: ganamos tiempo y la comunicación con nuestros clientes mejoró un montón."</p>
         <div class="testi-who">
-          <div class="testi-avatar" style="background:var(--naranja);">SA</div>
-          <div class="testi-name">Studio Alter Haus</div>
+          <div class="testi-avatar" style="background:var(--naranja);">JU</div>
+          <div>
+            <div class="testi-name">Juliana</div>
+            <div class="testi-role">CEO, Fluvial</div>
+          </div>
         </div>
       </div>
       <div class="testimonio reveal">
-        <p>"La automatización con IA nos dio velocidad y consistencia sin perder la voz de la marca."</p>
+        <div class="stars">★★★★★</div>
+        <p>"Necesitaba presencia online sin perder la seriedad del consultorio. Entendieron el rubro, cuidaron cada palabra y hoy tengo la agenda de pacientes nuevos completa."</p>
         <div class="testi-who">
-          <div class="testi-avatar" style="background:var(--negro);">FL</div>
-          <div class="testi-name">Fluvial</div>
+          <div class="testi-avatar" style="background:var(--negro);">SI</div>
+          <div>
+            <div class="testi-name">Silvina</div>
+            <div class="testi-role">Lic. en Psicología</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Pensé que la IA era para otro tipo de negocio, no para un estudio contable. Me mostraron que no: hoy los recordatorios y las consultas frecuentes se resuelven solos y el equipo se enfoca en lo importante."</p>
+        <div class="testi-who">
+          <div class="testi-avatar" style="background:var(--violeta-soft);">MA</div>
+          <div>
+            <div class="testi-name">Martín</div>
+            <div class="testi-role">Dueño, Estudio Contable</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Empecé a aparecer en las búsquedas de mi zona y los turnos se multiplicaron. Lo mejor es que no tuve que aprender nada técnico, ellos se ocuparon de todo."</p>
+        <div class="testi-who">
+          <div class="testi-avatar" style="background:var(--naranja);">GI</div>
+          <div>
+            <div class="testi-name">Gimena</div>
+            <div class="testi-role">Odontóloga</div>
+          </div>
         </div>
       </div>
     </div>
@@ -487,10 +580,10 @@
         <h3>Escribinos ahora →</h3>
         <span>WhatsApp · +54 9 11 5744-3449</span>
       </a>
-      <a href="mailto:hola.altermkt@gmail.com" class="contacto-card">
+      <a href="mailto:hola.altermkt@gmail.com" class="contacto-card mail-link">
         <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2" style="animation:glow-pulse 2.4s ease-in-out infinite;"/><path d="m3 7 9 6 9-6"/></svg></div>
         <h3>Mandanos un mail</h3>
-        <span>hola.altermkt@gmail.com</span>
+        <span>hola.altermkt@gmail.com<span class="hint">Se abre tu app de mail — si no pasa nada, lo copiamos para que lo pegues vos</span></span>
       </a>
       <a href="https://instagram.com/hola.altermkt" target="_blank" class="contacto-card">
         <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#E3FF3B" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" style="transform-origin:center;animation:spin-slow 6s linear infinite;"/><circle cx="17.5" cy="6.5" r="1" fill="#E3FF3B"/></svg></div>
@@ -504,14 +597,16 @@
 <footer>
   <div class="wrap" style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;width:100%;">
     <div class="logo"><span class="a">ALTER</span><span class="m">MKT</span></div>
-    <div>© 2026 Alter Mkt — Le damos otra cara digital a tu negocio de siempre.</div>
+    <div>© 2026 Alter Mkt — Marketing con IA para que tu pyme no se quede afuera.</div>
     <div style="display:flex;gap:18px;">
       <a href="https://wa.me/5491157443449" target="_blank">WhatsApp</a>
-      <a href="mailto:hola.altermkt@gmail.com">Email</a>
+      <a href="mailto:hola.altermkt@gmail.com" class="mail-link">Email</a>
       <a href="https://instagram.com/hola.altermkt" target="_blank">Instagram</a>
     </div>
   </div>
 </footer>
+
+<div class="toast" id="toast"></div>
 
 <script>
   const burger = document.getElementById('burgerBtn');
@@ -539,6 +634,30 @@
     });
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Mail links: mailto still fires normally, but we also copy the address
+  // and show a toast — so a click always does *something* visible, even
+  // on devices with no mail app configured.
+  const toast = document.getElementById('toast');
+  let toastTimer;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+  }
+  document.querySelectorAll('.mail-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const email = 'hola.altermkt@gmail.com';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email)
+          .then(() => showToast('Copiado: ' + email))
+          .catch(() => showToast(email));
+      } else {
+        showToast(email);
+      }
+    });
+  });
 </script>
 
 </body>
